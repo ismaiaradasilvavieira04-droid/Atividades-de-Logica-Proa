@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <h1>Atividade</h1>
+
+    <script>
+        let aprovados = 0;
+        let continuar = "s";
+
+        while (continuar == "s") {
+
+            let n1 = parseFloat(prompt("Digite nota 1"));
+            let n2 = parseFloat(prompt("Digite nota 2"));
+
+            let media = (n1 + n2) / 2;
+
+            document.write("Media: " + media + "<br>");
+
+            if (media >= 9.5) {
+                document.write("Passou<br>");
+                aprovados++;
+            } else {
+                document.write("Nao passou<br>");
+            }
+
+            continuar = prompt("Quer continuar? s/n");
+        }
+
+        document.write("Total aprovados: " + aprovados);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <h1>Atividade 7</h1>
+
+    <script>
+        let soma = 0;
+
+        for (let i = 1; i <= 6; i++) {
+            let nota;
+
+            do {
+                nota = parseFloat(prompt("Digite a nota " + i));
+
+                if (nota < 0 || nota > 10) {
+                    alert("Nota inválida");
+                }
+
+            } while (nota < 0 || nota > 10);
+
+            soma = soma + nota;
+        }
+
+        let media = soma / 6;
+
+        document.write("Media: " + media + "<br>");
+
+        if (media >= 5) {
+            document.write("Aprovado");
+        } else {
+            document.write("Reprovado");
+        }
+    </script>
+
+</body>
+</html>
