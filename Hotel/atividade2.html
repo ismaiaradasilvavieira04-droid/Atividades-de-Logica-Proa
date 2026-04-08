@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício hotel</title>
+</head>
+
+<body>
+    <h1> Hotel Washinton</h1>
+    <script>
+        let diarias = parseFloat(prompt("qual é o valor da diaria ?"))
+
+        if (diarias < 0) {
+            document.write("valor invalido")
+        } else {
+            
+            let total = 0
+            let rodando = true
+            while (rodando) {
+                let nome = prompt("digite o nome do hóspede(ou 'fim' para sair):")
+
+                switch (nome.toLowerCase()) {
+                    case "fim":
+                        document.write("total :R$ " + total.toFixed(2))
+                        rodando = false
+                        break
+                    default:
+                        let idade = parseFloat(prompt("qual é a idade do hóspede ?"))
+
+                        if (idade < 6) {
+                            alert(nome + " nao paga")
+                        } else if (idade > 60) {
+                            let meia = diarias / 2
+                            total += meia
+                            alert(nome + " paga meia: R$ " + meia.toFixed(2))
+                        } else {
+                            total += diarias
+                            alert(nome + "pagar intera: R$ " + diarias.toFixed(2))
+                        }
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

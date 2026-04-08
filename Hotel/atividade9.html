@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Washinton </title>
+</head>
+<body>
+    <h1>Hotel Washinton </h1>
+
+    <script>
+        let menor = 999999;
+        let melhor = "";
+
+        let continuar = "sim";
+
+        while (continuar == "sim") {
+
+            let nome = prompt("Nome da empresa:");
+            let valor = parseFloat(prompt("Valor por aparelho:"));
+            let qtd = parseInt(prompt("Quantidade:"));
+            let desc = parseFloat(prompt("Desconto (%):"));
+            let min = parseInt(prompt("Quantidade mínima:"));
+
+            let total = valor * qtd;
+
+            if (qtd >= min) {
+                total = total - (total * desc / 100);
+            }
+
+            alert("Total: R$ " + total);
+
+            if (total < menor) {
+                menor = total;
+                melhor = nome;
+            }
+
+            continuar = prompt("Quer continuar? (sim ou nao)");
+        }
+
+        alert("Mais barato: " + melhor + " por R$ " + menor);
+    </script>
+
+</body>
+</html>

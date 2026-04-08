@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Washinton</title>
+</head>
+<body>
+    <h1>Hotel Washinton</h1>
+
+    <script>
+        let nome = prompt("Digite seu nome:");
+        let convidados = parseInt(prompt("Quantidade de convidados:"));
+
+        if (convidados > 350) {
+            alert("Muita gente, não cabe no salão");
+        } else if (convidados <= 0) {
+            alert("Número inválido");
+        } else {
+
+            let agua = parseFloat(prompt("Litros de água:"));
+            let cafe = parseFloat(prompt("Litros de café:"));
+            let salgados = parseInt(prompt("Quantidade de salgados:"));
+
+            let total = (agua * 0.40) + (cafe * 0.80) + ((salgados / 100) * 34);
+
+            alert("Água: " + agua + "L");
+            alert("Café: " + cafe + "L");
+            alert("Salgados: " + salgados);
+
+            alert("Total: R$ " + total);
+
+            let confirmar = prompt("Confirmar reserva? (sim ou nao)");
+
+            if (confirmar == "sim") {
+                alert("Reserva feita para " + nome);
+            } else {
+                alert("Reserva cancelada");
+            }
+        }
+    </script>
+
+</body>
+</html>

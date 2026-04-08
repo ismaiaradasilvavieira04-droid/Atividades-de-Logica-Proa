@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Washinton </title>
+</head>
+<body>
+    <h1>Hotel Washinton </h1>
+
+    <script>
+        let dia = prompt("Digite o dia:");
+        let hora = parseInt(prompt("Digite o horário:"));
+
+        if (dia == "segunda" || dia == "terca" || dia == "quarta" || dia == "quinta" || dia == "sexta") {
+
+            if (hora >= 7 && hora <= 23) {
+                let empresa = prompt("Nome da empresa:");
+                alert("Reservado para " + empresa);
+            } else {
+                alert("Indisponível");
+            }
+
+        } else if (dia == "sabado" || dia == "domingo") {
+
+            if (hora >= 7 && hora <= 15) {
+                let empresa = prompt("Nome da empresa:");
+                alert("Reservado para " + empresa);
+            } else {
+                alert("Indisponível");
+            }
+
+        } else {
+            alert("Dia errado");
+        }
+    </script>
+
+</body>
+</html>

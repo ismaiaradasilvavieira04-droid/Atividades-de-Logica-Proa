@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Washinton </title>
+</head>
+<body>
+    <h1>Hotel Washinton </h1>
+
+    <script>
+        let nome = prompt("Digite seu nome:");
+
+        let alcool1 = parseFloat(prompt("Preço do álcool no posto 1:"));
+        let gasolina1 = parseFloat(prompt("Preço da gasolina no posto 1:"));
+
+        let alcool2 = parseFloat(prompt("Preço do álcool no posto 2:"));
+        let gasolina2 = parseFloat(prompt("Preço da gasolina no posto 2:"));
+
+        let litros = 42;
+
+        let total1;
+        let tipo1;
+
+        if (alcool1 <= gasolina1 * 0.7) {
+            total1 = alcool1 * litros;
+            tipo1 = "álcool";
+        } else {
+            total1 = gasolina1 * litros;
+            tipo1 = "gasolina";
+        }
+
+        let total2;
+        let tipo2;
+
+        if (alcool2 <= gasolina2 * 0.7) {
+            total2 = alcool2 * litros;
+            tipo2 = "álcool";
+        } else {
+            total2 = gasolina2 * litros;
+            tipo2 = "gasolina";
+        }
+
+        if (total1 < total2) {
+            alert(nome + ", melhor no posto 1 com " + tipo1);
+        } else {
+            alert(nome + ", melhor no posto 2 com " + tipo2);
+        }
+    </script>
+
+</body>
+</html>

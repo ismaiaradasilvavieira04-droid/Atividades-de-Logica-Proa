@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Washinton</title>
+</head>
+<body>
+
+    <h1>Hotel Washinton</h1>
+
+    <script>
+        let nomeHotel = "Hotel Washinton";
+        document.write("<br> Nome do hotel: " + nomeHotel);
+
+        let nome = prompt("Digite seu nome:");
+        let senha = prompt("Digite sua senha:");
+
+        if (senha == "2678") {
+
+            alert("Bem-vindo ao " + nomeHotel + ", " + nome);
+
+            let opcao = prompt("1- Reservar quarto \n2- Sair");
+
+            if (opcao == 1) {
+
+                let diaria = parseFloat(prompt("Valor da diária:"));
+                let dias = parseInt(prompt("Quantos dias vai ficar?"));
+
+                let total = diaria * dias;
+
+                alert("Total da reserva: R$ " + total);
+
+                let hospede = prompt("Nome do hóspede:");
+
+                let confirmar = prompt("Deseja confirmar a reserva? (sim/nao)");
+
+                if (confirmar == "sim") {
+                    alert("Reserva confirmada para " + hospede);
+                } else {
+                    alert("Reserva cancelada");
+                }
+
+            } else {
+                alert("Até mais!");
+            }
+
+        } else {
+            alert("Senha errada");
+        }
+    </script>
+
+</body>
+</html>

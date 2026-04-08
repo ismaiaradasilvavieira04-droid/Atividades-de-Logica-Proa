@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Washinton</title>
+</head>
+<body>
+    <h1>Hotel Washinton</h1>
+
+    <script>
+        let lista = [];
+
+        function menu() {
+            let op = prompt("1- Cadastrar\n2- Buscar\n3- Sair");
+
+            if (op == 1) {
+                cadastrar();
+            } else if (op == 2) {
+                buscar();
+            } else if (op == 3) {
+                alert("Saindo...");
+            } else {
+                alert("Opção inválida");
+                menu();
+            }
+        }
+
+        function cadastrar() {
+            if (lista.length == 15) {
+                alert("Limite cheio");
+                menu();
+                return;
+            }
+
+            let nome = prompt("Nome do hóspede:");
+            lista.push(nome);
+
+            alert("Cadastrado!");
+            menu();
+        }
+
+
+        function buscar() {
+            let nome = prompt("Digite o nome:");
+
+            let achou = false;
+
+            for (let i = 0; i < lista.length; i++) {
+                if (lista[i] == nome) {
+                    achou = true;
+                }
+            }
+
+            if (achou) {
+                alert("Encontrado!");
+            } else {
+                alert("Não encontrado");
+            }
+
+            menu();
+        }
+
+        menu();
+    </script>
+
+</body>
+</html>

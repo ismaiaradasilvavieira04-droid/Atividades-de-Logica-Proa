@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Washinton</title>
+</head>
+<body>
+    <h1>Hotel Washinton</h1>
+
+    <script>
+        let convidados = parseInt(prompt("Digite o número de convidados:"));
+
+        if (convidados > 350) {
+            alert("Não cabe tudo isso");
+        } else {
+
+            if (convidados <= 220) {
+
+                let cadeiras = 0;
+
+                if (convidados > 150) {
+                    cadeiras = convidados - 150;
+                }
+
+                alert("Auditório Laranja");
+                alert("Cadeiras extras: " + cadeiras);
+
+            } else {
+                alert("Auditório Colorado");
+            }
+
+            let resp = prompt("Confirmar? (sim ou nao)");
+
+            if (resp == "sim") {
+                alert("Reserva confirmada");
+            } else {
+                alert("Cancelado");
+            }
+        }
+    </script>
+
+</body>
+</html>

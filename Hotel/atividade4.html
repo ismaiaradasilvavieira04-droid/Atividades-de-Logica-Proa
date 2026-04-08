@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Washinton </title>
+</head>
+<body>
+    <h1>Hotel Washinton</h1>
+
+    <script>
+        let garcons = parseInt(prompt("Quantos garçons serão usados?"));
+        let horas = parseInt(prompt("Quantas horas vai durar o evento?"));
+
+        let total = garcons * horas * 10.5;
+
+        alert("O custo do evento é: R$ " + total);
+
+        let resposta = prompt("Deseja confirmar? (sim ou nao)");
+
+        if (resposta == "sim") {
+            alert("Reserva confirmada! Total: R$ " + total);
+        } else {
+            alert("Reserva cancelada");
+        }
+    </script>
+
+</body>
+</html>
