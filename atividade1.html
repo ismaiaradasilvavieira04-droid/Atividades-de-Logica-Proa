@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>atividade 1</title>
+</head>
+
+<body>
+    <h1>atividade 1</h1>
+
+    <script>
+        let valorFinal = 0;
+
+        let opcaoPrato = parseInt(prompt("Escolha um prato:\n1- Vegano\n2- Peixe\n3- Frango\n4- Carne"));
+
+        switch (opcaoPrato) {
+            case 1:
+                valorFinal += 180;
+                break;
+            case 2:
+                valorFinal += 230;
+                break;
+            case 3:
+                valorFinal += 250;
+                break;
+            case 4:
+                valorFinal += 350;
+                break;
+            default:
+                document.write("<br> ⚠️ Prato inválido");
+        }
+
+        let opcaoDoce = parseInt(prompt("Escolha uma sobremesa:\n1- Abacaxi\n2- Sorvete diet\n3- Mousse diet\n4- Mousse chocolate"));
+
+        switch (opcaoDoce) {
+            case 1:
+                valorFinal += 75;
+                break;
+            case 2:
+                valorFinal += 110;
+                break;
+            case 3:
+                valorFinal += 170;
+                break;
+            case 4:
+                valorFinal += 200;
+                break;
+            default:
+                document.write("<br> ⚠️ Sobremesa inválida");
+        }
+
+        let opcaoBebida = parseInt(prompt("Escolha uma bebida:\n1- Chá\n2- Suco de laranja\n3- Suco de melão\n4- Refrigerante diet"));
+
+        switch (opcaoBebida) {
+            case 1:
+                valorFinal += 20;
+                break;
+            case 2:
+                valorFinal += 70;
+                break;
+            case 3:
+                valorFinal += 100;
+                break;
+            case 4:
+                valorFinal += 65;
+                break;
+            default:
+                document.write("<br> ⚠️ Bebida inválida");
+        }
+
+        document.write("<br><br> 🍽️ Resumo do pedido:");
+        document.write("<br> Prato escolhido: " + opcaoPrato);
+        document.write("<br> Sobremesa escolhida: " + opcaoDoce);
+        document.write("<br> Bebida escolhida: " + opcaoBebida);
+        document.write("<br><br> Total da refeição: " + valorFinal);
+    </script>
+
+</body>
+</html>
