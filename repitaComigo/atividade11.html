@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+</head>
+<body>
+    <h1>Atividade 11</h1>
+    <script>
+         let dentro = 0
+        let fora = 0
+
+        for (let n = 1; n <= 10; n++) {
+            let valor = parseFloat(prompt("Digite o " + n + "° valor:"))
+
+            if (valor >= 24 && valor <= 42) {
+                dentro++
+            } else {
+                fora++
+            }
+        }
+
+        document.write("Valores entre 24 e 42: " + dentro + "<br>")
+        document.write("Valores fora do intervalo: " + fora)
+    </script>
+</body>
+</html>
